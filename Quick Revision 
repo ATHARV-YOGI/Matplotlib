@@ -1,0 +1,107 @@
+Matplotlib Quick Revision Notes
+
+1. Importing
+
+import matplotlib.pyplot as plt
+
+
+---
+
+2. Basic Plot
+
+x = [1,2,3,4]
+y = [10,20,25,30]
+
+plt.plot(x, y)          # Line plot
+plt.show()
+
+
+---
+
+3. Labels & Title
+
+plt.xlabel("X-axis Label")
+plt.ylabel("Y-axis Label")
+plt.title("Graph Title")
+
+
+---
+
+4. Multiple Plots
+
+plt.plot(x, y, label="Line1")
+plt.plot(x, [i*2 for i in y], label="Line2")
+plt.legend()
+
+
+---
+
+5. Markers, Colors, Linestyles
+
+plt.plot(x, y, color="red", marker="o", linestyle="--")
+
+color → 'r','g','b','c','m','y','k' or hex
+
+marker → o, s, *, +, ^, D
+
+linestyle → - , -- , -. , :
+
+
+
+---
+
+6. Bar Chart
+
+plt.bar(x, y, color="orange")
+
+Horizontal bar → plt.barh(x, y)
+
+
+---
+
+7. Histogram
+
+plt.hist(data, bins=10, color="purple")
+
+
+---
+
+8. Scatter Plot
+
+plt.scatter(x, y, color="green")
+
+
+---
+
+9. Pie Chart
+
+plt.pie([10,20,30], labels=["A","B","C"], autopct="%1.1f%%", shadow=True)
+
+
+---
+
+10. Subplots
+
+plt.subplot(1,2,1)   # (rows, cols, index)
+plt.plot(x,y)
+
+plt.subplot(1,2,2)
+plt.bar(x,y)
+
+
+---
+
+11. Figure Size
+
+plt.figure(figsize=(6,4))
+
+
+---
+
+12. Save Plot
+
+plt.savefig("plot.png")
+
+
+---
+
